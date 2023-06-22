@@ -1,0 +1,362 @@
+<div class="subheader py-2 py-lg-4 subheader-solid subheader-pos">
+  <div
+    class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
+  >
+    <div class="d-flex align-items-center flex-wrap mr-2">
+      <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">
+        {{ "ASSESSMENT_DETAILS.TITLE" | translate }}
+      </h5>
+    </div>
+    <div class="d-flex align-items-center">
+      <button type="submit" class="btn btn-secondary" (click)="backToActiveAssessment()">
+        {{ "COMMON.BACK" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row asessmentDetailRow">
+    <div class="col-lg-8">
+      <div class="card card-custom mobileCard">
+        <div class="card-header card-header-tabs-line no-bottom-border">
+          <div class="card-title">
+            <span class="card-icon">
+              <img
+                class="microsoft_logo"
+                src="../../../../assets/media/images/windows.png"
+              />
+            </span>
+            <h1 class="card-label assessment-title">Window server migration</h1>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="tab-content active-assessment-container">
+            <div class="">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 100%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="assessment-status">
+                    {{ "ACTIVE_ASSESSMENT.UNDER_REVIEW" | translate }}
+                  </p>
+                </div>
+                <div class="col-sm">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 0"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="assessment-status">
+                    {{ "ACTIVE_ASSESSMENT.ASSESSMENT" | translate }}
+                  </p>
+                </div>
+                <div class="col-sm">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 0"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="assessment-status">
+                    {{ "ACTIVE_ASSESSMENT.COMPLETED" | translate }}
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mt-5">
+                <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                  <div class="symbol symbol-circle symbol-lg-35">
+                    <img
+                      src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                      alt="image"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="font-weight-normal profile-name"
+                    >Walter Cook</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer details-footer">
+          <mat-tab-group class="demo-tab-group">
+            <mat-tab label="Activities">
+              <div class="activityBox">
+                <div class="activityRow">
+                  <div class="actHeader">
+                    <span class="material-icons"> event </span> 6 FEBRUARY
+                  </div>
+                  <div class="demo-tab-content">
+                    <div class="example-preview">
+                      <div class="d-flex align-items-center actButTitle">
+                        <button type="button"
+                          class="fileButton"
+                          (click)="isCollapsed = !isCollapsed"
+                          [attr.aria-expanded]="!isCollapsed"
+                          aria-controls="collapseExample">
+                          <span class="material-icons">
+                            description
+                            </span>
+                        </button> <h5>Activity Name, Date & Time</h5>
+                      </div>
+                      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="actInfoBox">
+                              <div class="actInfoRow">
+                                <div class="d-flex align-items-center">
+                                  <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                                    <div class="symbol symbol-circle symbol-lg-35">
+                                      <img
+                                        src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                                        alt="image"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="d-flex flex-column">
+                                    <span class="font-weight-normal profile-name"
+                                      >Walter Cook</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="actInfoRow">
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                              </div>
+                              <div class="actInfoRow d-flex downbtnsGroup">
+                                <button class="dlAttachButton d-flex align-items-center mr-4"><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                                  save_alt
+                                  </span></button>
+                                  <button class="dlAttachButton d-flex align-items-center mr-4  "><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                                    save_alt
+                                    </span></button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="demo-tab-content">
+                    <div class="example-preview">
+                      <div class="d-flex align-items-center actButTitle">
+                        <button type="button"
+                          class="fileButton"
+                          (click)="isCollapsed2 = !isCollapsed2"
+                          [attr.aria-expanded]="!isCollapsed2"
+                          aria-controls="collapseExample2">
+                          <span class="material-icons">
+                            description
+                            </span>
+                        </button> <h5>Activity Name, Date & Time</h5>
+                      </div>
+                      <div id="collapseExample2" [ngbCollapse]="isCollapsed2">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="actInfoBox">
+                              <div class="actInfoRow">
+                                <div class="d-flex align-items-center">
+                                  <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                                    <div class="symbol symbol-circle symbol-lg-35">
+                                      <img
+                                        src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                                        alt="image"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="d-flex flex-column">
+                                    <span class="font-weight-normal profile-name"
+                                      >Walter Cook</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="actInfoRow">
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                              </div>
+                              <div class="actInfoRow d-flex downbtnsGroup">
+                                <button class="dlAttachButton d-flex align-items-center mr-4"><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                                  save_alt
+                                  </span></button>
+                                  <button class="dlAttachButton d-flex align-items-center mr-4  "><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                                    save_alt
+                                    </span></button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </mat-tab>
+            <mat-tab label="Pre-Requisite">
+              <div class="demo-tab-content">
+                <label class="wizSecTitle"><span>1</span>What Are Your Primary Goals For This Migration? *</label>
+                <p>Management</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>2</span>Do you have the SQL servers hosted in a</label>
+                <p>Running on as Physical Servers</p>
+                <hr class="wizSep">
+
+                <label class="wizSecTitle"><span>3</span>Which Hypervisor Are You Using? / Vmware / Other ?</label>
+                <p>VMWare</p>
+                <hr class="wizSep">  
+                
+                <label class="wizSecTitle"><span>4</span>Do You Have Any Of The Below Servers To Migrate?</label>
+                <p>VMWare</p>
+                <hr class="wizSep">
+
+                <label class="wizSecTitle"><span>5</span>Do You Have Any Of The Below Servers To Migrate?</label>
+                <p>VMWare</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>6</span>Specify The Sql Versions You Intend To Migrate.</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+
+                <label class="wizSecTitle"><span>7</span>How Many Servers Or Databases You Want To Migrate?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+
+                <label class="wizSecTitle"><span>8</span>What Is An Average Database Size Requirements Per Server / Database?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>9</span>Please Mention In Brief About The Application Stack For The Sql Db, For Example, Does It Include Web Servers?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>10</span>Do You Also Want To Migrate The Dependent Servers Or Workloads Along With The Sql?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>11</span>What Is The Current Average Cpu Cores Requirements Per Server / Database?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>12</span>What Is The Average Ram Requirements Per Servers / Database?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+                <label class="wizSecTitle"><span>13</span>Are You Ok With Installing Discovery Agents On The Servers / Virtual Machines For Discovery And Assessments Before The Migration?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+
+                <label class="wizSecTitle"><span>14</span>Do You Have Admin Level Privileges On These Servers To Perform Assessments And Inventory? Such As, Root Access To The Sql Databases?</label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+                <hr class="wizSep">
+                
+              </div>
+            </mat-tab>
+            <mat-tab label="Pre-Assessment">
+              <div class="demo-tab-content">
+                <div class="wizCheckWrap">
+                  <label class="checkbox checkbox-success">
+                    <input type="checkbox" name="Checkboxes5" checked="checked" />
+                    <span></span>
+                    Checklist Heading 1
+                </label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                </div>
+
+                <div class="wizCheckWrap">
+                  <label class="checkbox checkbox-success">
+                    <input type="checkbox" name="Checkboxes5" checked="checked" />
+                    <span></span>
+                    Checklist Heading 2
+                </label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                </div>
+
+                <div class="wizCheckWrap">
+                  <label class="checkbox checkbox-success">
+                    <input type="checkbox" name="Checkboxes5" checked="checked" />
+                    <span></span>
+                    Checklist Heading 3
+                </label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                </div>
+
+                <div class="wizCheckWrap">
+                  <label class="checkbox checkbox-success">
+                    <input type="checkbox" name="Checkboxes5" checked="checked" />
+                    <span></span>
+                    Checklist Heading 4
+                </label>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                </div>
+
+
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-custom asDetailCusCard">
+        <div class="card-header card-header-tabs-line no-bottom-border">
+          <div class="card-title">
+            <span class="card-icon">
+              <div class="calender-bg">
+                <span class="material-icons"> event </span>
+              </div>
+            </span>
+            <div class="card-label">
+              <div class="time-header">{{'ASSESSMENT_DETAILS.DATE_TIME' | translate}}</div>
+              <div class="time-format">Monday 06 Feb 2023</div>
+              <div class="time-format">09:00 Am, India (GMT+5:30)</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer asDetailCusCardFooter">
+          <div class="card-title msgsBox">
+            <span class="material-icons-outlined">
+              videocam
+              </span>
+            
+            <div class="card-label">
+              <div class="time-header">{{'ASSESSMENT_DETAILS.DATE_TIME' | translate}}</div>
+              <div class="time-format">Monday 06 Feb 2023</div>
+              <div class="time-format">09:00 Am, India (GMT+5:30)</div>
+            </div>
+          </div>
+          <div class="asDetailCusCardMeet d-flex">
+            <button type="reset" class="btn btn-secondary">Join Meeting</button>
+            <a href="#">Reschedule Meeting</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

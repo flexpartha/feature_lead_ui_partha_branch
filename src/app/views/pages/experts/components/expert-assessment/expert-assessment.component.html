@@ -1,0 +1,166 @@
+<div class="subheader py-2 py-lg-4 subheader-solid subheader-pos">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+        <div class="d-flex align-items-center flex-wrap mr-2">
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">
+              {{ "HEADER.ACTIVE_ASSESSMENT" | translate }}
+            </h5>
+          </div>
+    </div>
+</div>
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+        <div class="row" *ngIf="allAssessments?.length" >
+            <div class="col-lg-6 pb-5" *ngFor="let assessment of allAssessments">
+                <div class="card card-custom cursor-pointer mobileCard"
+                (click)="navigateAssessmentPage(assessment?.assessment.id)">
+                    <div class="card-header card-header-tabs-line no-bottom-border">
+                        <div class="card-title">
+                            <span class="card-icon">
+                                <img
+                                *ngIf="assessment?.serviceTypeId === 2"
+                                class="microsoft_logo"
+                                src="../../../../../../assets/media/images/windows server.svg"
+                                />
+                                <img
+                                *ngIf="assessment?.serviceTypeId === 1"
+                                src="../../../../../../assets/media/images/SQL sever.svg"
+                                alt=""
+                                />
+                            </span>
+                            <h1 class="card-label assessment-title">
+                                {{
+                                  (assessment?.serviceTypeId === 1
+                                    ? "NEW_ASSESSMENT.SQL_SERVER_MIGRATION"
+                                    : "NEW_ASSESSMENT.WINDOWS_SERVER_MIGRATION"
+                                  ) | translate
+                                }}
+                              </h1>
+                        </div>
+                        <div class="card-toolbar" *ngIf="assessment?.status == 0">
+                            <a class="btn btn-light-success font-weight-bold mr-2"
+                              >NEW ASSESSMENT</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content active-assessment-container">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm">
+                                      <div class="progress">
+                                        <div
+                                          class="progress-bar"
+                                          role="progressbar"
+                                          aria-valuenow="100"
+                                          aria-valuemin="0"
+                                          aria-valuemax="100"
+                                          [ngClass]="{
+                                            'status-width0': assessment?.status == 0,
+                                            'status-width100': assessment?.status == 1 || assessment?.status == 2
+                                            || assessment?.status == 3
+                                          }"
+                                        ></div>
+                                      </div>
+                                      <p class="assessment-status">
+                                        {{ "ACTIVE_ASSESSMENT.UNDER_REVIEW" | translate }}
+                                      </p>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="progress">
+                                        <div
+                                          class="progress-bar"
+                                          role="progressbar"
+                                          aria-valuenow="100"
+                                          aria-valuemin="0"
+                                          aria-valuemax="100"
+                                          [ngClass]="{
+                                            'status-width0':
+                                              assessment?.status == 0,
+                                            'status-width100':
+                                              assessment?.status == 2 || assessment?.status == 3
+                                          }"
+                                        ></div>
+                                      </div>
+                                      <p class="assessment-status">
+                                        {{ "ACTIVE_ASSESSMENT.ASSESSMENT" | translate }}
+                                      </p>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="progress">
+                                        <div
+                                          class="progress-bar"
+                                          role="progressbar"
+                                          aria-valuenow="100"
+                                          aria-valuemin="0"
+                                          aria-valuemax="100"
+                                          [ngClass]="{
+                                            'status-width0': assessment?.status == 0,
+                                            'status-width100': assessment?.status == 3
+                                          }"
+                                        ></div>
+                                      </div>
+                                      <p class="assessment-status">
+                                        {{ "ACTIVE_ASSESSMENT.COMPLETED" | translate }}
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm">
+                                      <div class="d-flex align-items-center">
+                                        <span class="material-icons"> language </span>
+                                        <span class="ml-4 dltData formateddate-value">India({{ getUserTimeZone() }})</span>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="d-flex align-items-center formateddate">
+                                        <span class="material-icons"> event </span>
+                                        <span class="ml-4 dltData formateddate-value">{{
+                                          getFormattedDate(
+                                            assessment?.bookingDate
+                                          )
+                                        }}</span>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="d-flex align-items-center">
+                                        <span> <i class="far fa-clock"></i> </span>
+                                        <span class="ml-4 dltData">{{
+                                          getFormattedTime(
+                                            assessment?.bookingDate
+                                          )
+                                        }}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer-bg">
+                      <div class="row">
+                        <div class="col-sm">
+                          <div class="d-flex align-items-center card-top">
+                            <img src="../../../../../../assets/media/images/user.png"
+                                   alt="image" width="25" height="25"
+                                  />
+                            <span class="ml-4 dltData">{{assessment?.assessmentRequesterName}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!allAssessments?.length && !loading" class="noDatabg">
+            <span class="material-icons"> cloud_off </span>
+            No Data Found
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center"
+            *ngIf="loading"
+          >
+            <mat-spinner diameter="40"></mat-spinner>
+          </div>
+    </div>
+</div>

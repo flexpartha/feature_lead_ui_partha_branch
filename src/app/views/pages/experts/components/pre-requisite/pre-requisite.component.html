@@ -1,0 +1,5 @@
+<div class="demo-tab-content" *ngFor="let  prerequisiteList of preRequisiteMap; let i=index;">
+    <label class="wizSecTitle"><span>{{i+1}}</span>{{prerequisiteList.preRequisite.question}}</label>
+      <div class="innerContent" [innerHTML]="prerequisiteList.preRequisite.answers | specialPipe"></div>
+      <hr class="wizSep">
+</div>

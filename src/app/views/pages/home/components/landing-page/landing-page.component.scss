@@ -1,0 +1,815 @@
+/* ---------------------------- General */
+/* :root {} */
+html {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif !important;
+  background: #fff 0% 0% no-repeat padding-box;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  max-width: 1920px !important;
+  margin: 0 auto !important;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-moz-selection {
+  background-color: #3d8bee;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #3d8bee;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+body::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3d8bee !important;
+  border-radius: 1px !important;
+  border: 3px solid #3d8bee !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: #9e9e9e47 !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fontBlack {
+  color: #0a0a0a;
+}
+
+.mwidth20 {
+  width: 20%;
+}
+
+.mwidth25 {
+  width: 25%;
+}
+
+.mwidth30 {
+  width: 30%;
+}
+
+.mwidth35 {
+  width: 35%;
+}
+
+.mwidth40 {
+  width: 40%;
+}
+
+.mwidth45 {
+  width: 45%;
+}
+
+.mwidth50 {
+  width: 50%;
+}
+
+.mwidth55 {
+  width: 55%;
+}
+
+.mwidth60 {
+  width: 60%;
+}
+
+.mwidth65 {
+  width: 65%;
+}
+
+.mwidth70 {
+  width: 70%;
+}
+
+.mwidth75 {
+  width: 75%;
+}
+
+.mwidth80 {
+  width: 80%;
+}
+
+.mwidth85 {
+  width: 85%;
+}
+
+.mwidth90 {
+  width: 90%;
+}
+
+.mwidth95 {
+  width: 95%;
+}
+
+.mwidth100 {
+  width: 100%;
+}
+
+.dflex {
+  display: flex;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.jspaceBtw {
+  justify-content: space-between;
+}
+
+.jspaceArd {
+  justify-content: space-around;
+}
+
+.jspaceEve {
+  justify-content: space-evenly;
+}
+
+.alignItemC {
+  align-items: center;
+}
+
+.flexdR {
+  flex-direction: row;
+}
+
+.flexdC {
+  flex-direction: column;
+}
+
+.flexEnd {
+  justify-content: flex-end;
+}
+
+.flexStart {
+  justify-content: flex-start;
+}
+
+.marLeft30 {
+  margin: 0 0 0 30px;
+}
+
+.mbot30 {
+  margin: 0 0 30px 0;
+}
+
+.mtop30 {
+  margin: 30px 0 0 0;
+}
+
+.mtop15 {
+  margin: 15px 0 0 0;
+}
+
+.mtop10 {
+  margin: 10px 0 0 0;
+}
+
+.padlr15 {
+  padding: 0px 15px 0px 15px;
+}
+
+.padlr30 {
+  padding: 0px 30px 0px 30px;
+}
+
+.padtb30 {
+  padding: 30px 0 30px 0;
+}
+
+.padtb15 {
+  padding: 15px 0 15px 0;
+}
+
+.margin0 {
+  margin: 0 !important;
+}
+
+.pad0 {
+  padding: 0 !important;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.dgridC {
+  display: grid;
+  place-content: center;
+}
+
+.transition3 {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------- General */
+
+/* ------------------------------- Main */
+
+.msMain {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.msbPad {
+  padding: 0 6%;
+}
+
+/* ------------------------ Nav */
+
+.msNav {
+  height: 88px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msNav img {
+  height: 32px;
+  object-fit: contain;
+}
+
+.msNav a {
+  width: 85px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: grid;
+  place-content: center;
+  background: #3d8bee 0% 0% no-repeat padding-box;
+}
+
+/* ------------------------ Nav */
+
+/* --------------------- Banner */
+
+.msBanner {
+  height: 696px;
+  background-image: url("../../../../../../assets/media/images/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.msBanner a {
+  width: 180px;
+  height: 56px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: grid;
+  place-content: center;
+  background: #3d8bee 0% 0% no-repeat padding-box;
+}
+
+.msBanner h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.msBanner p {
+  font-size: 16px;
+  margin: 24px 0;
+}
+
+/* --------------------- Banner */
+
+/* --------------- How It Works */
+
+.msTitle h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a25;
+  text-align: center;
+}
+
+.msTitle p {
+  font-size: 16px;
+  color: #5b5d6a;
+  text-align: center;
+  margin: 16px 0 0 0;
+}
+
+.hiwBox h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a1a25;
+  margin: 24px 0 16px 0;
+}
+
+.hiwBox p {
+  font-size: 16px;
+  color: #5b5d6a;
+}
+
+.msHiwContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 120px 0;
+}
+
+.msTitle {
+  margin: 120px 0 64px 0;
+}
+
+.hiwBox {
+  width: 496px;
+}
+
+.hiwBox span {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  background: #d9f5f4 0% 0% no-repeat padding-box;
+  border: 1px solid #77c0bb;
+  object-fit: none;
+  display: grid;
+  place-content: center;
+  color: #77c0bb;
+}
+
+/* --------------- How It Works */
+
+/* ---------------- Get Started */
+
+.msgs {
+  background: #f3f6f9 0% 0% no-repeat padding-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.msgsContent {
+  margin: 120px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msgsTitle h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a25;
+}
+
+.msgsTitle p {
+  font-size: 16px;
+  color: #5b5d6a;
+  margin: 16px 0 0 0;
+}
+
+.msgsBox h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a1a25;
+}
+
+.msgsBox p {
+  font-size: 16px;
+  color: #5b5d6a;
+  font-weight: 500;
+}
+
+.msgsLeft {
+  padding: 0 6% 0 0;
+}
+
+.msgsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 44px 0 0 0;
+  padding: 0 15px 44px 0;
+  border-bottom: 1px solid #707070;
+}
+
+.msgsBox span {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  background: #d9f5f4 0% 0% no-repeat padding-box;
+  border: 1px solid #77c0bb;
+  object-fit: none;
+  margin: 0px 24px;
+  color: #77c0bb;
+  display: grid;
+  place-content: center;
+}
+
+/* ---------------- Get Started */
+
+/* --------------------- Footer */
+.msFooter {
+  height: 71px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.msFooter p {
+  color: #5b5d6a;
+  font-size: 16px;
+  font-weight: 400;
+}
+.msFooter p a {
+  font-weight: 400;
+}
+.msFooter p a i {
+  margin: 0 0 0 5px;
+}
+.msFooter p a,
+.msFooter p a i {
+  color: #0062ce;
+}
+.fooDivider {
+  margin: 0 5px;
+}
+.msbFooterPad {
+  padding: 0 2%;
+}
+/* --------------------- Footer */
+
+/* ------------------------------- Main */
+
+/* ----------------------------------------- Media Query Starts Here */
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1600px) {
+  .msFooter p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .hiwBox {
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .msFooter {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .msgsBox {
+    margin: 24px 0 0 0;
+    padding: 0 15px 24px 0;
+  }
+  .msBanner p {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+  .msBanner h2 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .msBanner {
+    height: 489px;
+  }
+  .msbPad {
+    padding: 0 3%;
+  }
+  .msNav {
+    height: 68px;
+  }
+  .msTitle {
+    margin: 80px 0 60px 0;
+  }
+  .msHiwContent {
+    margin: 0 0 80px 0;
+  }
+  .msgsContent {
+    margin: 80px 0;
+  }
+  .msgsBox span {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    margin: 0px 20px;
+  }
+  .msTitle p,
+  .hiwBox p,
+  .msgsTitle p,
+  .msgsBox p {
+    font-size: 14px;
+  }
+  .msgsBox h2 {
+    font-size: 30px;
+  }
+  .hiwBox h3 {
+    font-size: 22px;
+  }
+  .msTitle h2,
+  .msgsTitle h2 {
+    font-size: 30px;
+  }
+  .hiwBox span {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+  .msBanner a {
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .hiwBox {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .msgsRight {
+    display: none;
+  }
+
+  .msgsLeft.mwidth50 {
+    width: 100%;
+  }
+  .msgs {
+    background: unset;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, #000000cc, #000000d9),
+      url(../../../../../../assets/media/images/gs.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .msgsTitle h2,
+  .msgsTitle p,
+  .msgsBox h2 {
+    color: #fff;
+  }
+  .msgsBox p {
+    color: #ddd;
+    font-weight: 300;
+  }
+  .msgsBox span {
+    background: unset;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .msFooter {
+    height: auto;
+    text-align: center;
+    padding: 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .msbPad {
+    padding: 0px 3%;
+  }
+
+  .msgsBox {
+    padding: 0 0px 24px 0;
+  }
+
+  .msgsLeft {
+    padding: 0;
+  }
+
+  .msFooter {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .msHiwContent {
+    flex-direction: column;
+    margin: 0 0 60px 0;
+  }
+
+  .msTitle {
+    margin: 60px 0 64px 0;
+  }
+
+  .hiwBox {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+
+  .msFooter p {
+    text-align: center;
+  }
+
+  .msgsContent {
+    margin: 60px 0;
+  }
+
+  .msgsTitle {
+    text-align: center;
+  }
+
+  .msgsBox {
+    padding: 0 0px 24px 0;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #7fc4bf;
+  }
+
+  .msgsBox h2 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+    border: 1px solid #7fc4bf;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-content: center;
+  }
+
+  .hiwBox span,
+  .msgsBox span {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+
+  .msgsBox p {
+    font-size: 14px;
+    margin: 15px 0 0 0;
+  }
+
+  .msBanner {
+    height: 648px;
+    background-position: 69%;
+  }
+  .msBanner p br {
+    display: none;
+  }
+  .msNav img {
+    height: 28px;
+  }
+  .msNav a {
+    height: 36px;
+    font-size: 14px;
+  }
+  .msBanner a {
+    height: 36px;
+    font-size: 14px;
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .msBanner h2 {
+    font-size: 34px;
+  }
+
+  .msBanner p br {
+    display: none;
+  }
+
+  .msBanner p {
+    font-size: 14px;
+    margin: 24px 0;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 320px) {
+}

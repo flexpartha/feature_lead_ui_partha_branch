@@ -1,0 +1,219 @@
+<div class="d-flex flex-column flex-root" id="kt_login_wrapper">
+  <div
+    class="login login-3 login-signin-on d-flex flex-column flex-lg-row flex-row-fluid bg-white"
+    id="kt_login"
+  >
+    <div
+      class="login-aside d-flex flex-column flex-row-auto flex-center msbPad"
+      style="
+        background-image: url(assets/media/images/register.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="logoReg d-flex">
+        <a href="#"
+          ><img src="../../../../assets/media/logos/logo-light.png" alt=""
+        /></a>
+      </div>
+
+      <div class="msgsTitle">
+        <h2>Get Started</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+        </p>
+      </div>
+      <div class="msgsWrap">
+        <div class="msgsBox">
+          <h2>01</h2>
+          <span class="material-icons-outlined"> videocam </span>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore.
+          </p>
+        </div>
+        <div class="msgsBox">
+          <h2>02</h2>
+          <span class="material-icons-outlined"> videocam </span>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore.
+          </p>
+        </div>
+        <div class="msgsBox">
+          <h2>03</h2>
+          <span class="material-icons-outlined"> videocam </span>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore.
+          </p>
+        </div>
+        <div class="msgsBox">
+          <h2>04</h2>
+          <span class="material-icons-outlined"> videocam </span>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex-row-fluid d-flex flex-column position-relative p-7 overflow-hidden regRight"
+    >
+      <div
+        class="regDashPage d-flex flex-column-fluid flex-center mt-30 mt-lg-0"
+      >
+        <form
+          [formGroup]="registerForm"
+          (ngSubmit)="onSubmit()"
+          class="form"
+          novalidate="novalidate"
+          id="kt_login_signup_form"
+        >
+          <div class="pb-13 pt-lg-0 pt-5 text-center regTitle">
+            <h3 class="font-weight-bolder text-dark font-size-h1-lg">
+              {{ "AUTH.REGISTRATION" | translate }}
+            </h3>
+            <p class="text-muted font-weight-bold font-size-h4">
+              {{ "AUTH.ENTER_DETAILS_FOR_REGISTRATION" | translate }}
+            </p>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-6">
+              <label>{{ "AUTH.FIRST_NAME" | translate }}</label>
+              <input
+                class="form-control form-control-solid h-auto px-6 regInBorder regInPad font-size-h6"
+                type="text"
+                placeholder="First Name"
+                name="firstname"
+                autocomplete="off"
+                formControlName="firstName"
+                [readonly]="true"
+              />
+            </div>
+            <div class="col-lg-6 lastName">
+              <label>{{ "AUTH.LAST_NAME" | translate }}</label>
+              <input
+                class="form-control form-control-solid h-auto px-6 regInBorder regInPad font-size-h6"
+                type="text"
+                placeholder="Last Name"
+                name="lastname"
+                autocomplete="off"
+                formControlName="lastName"
+                [readonly]="true"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{ "AUTH.EMAIL" | translate }}</label>
+            <input
+              class="form-control form-control-solid h-auto px-6 regInBorder regInPad font-size-h6"
+              type="email"
+              placeholder="Email"
+              name="email"
+              autocomplete="off"
+              formControlName="email"
+              [readonly]="true"
+            />
+          </div>
+          <div class="form-group">
+            <label>{{ "AUTH.COUNTRY" | translate }}</label>
+            <select
+              formControlName="country"
+              class="form-control regInHeight"
+              id="exampleSelect1"
+            >
+              <option *ngFor="let country of countryList" [value]="country.id">
+                {{ country.name }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{ "AUTH.ORGANIZATION" | translate }}</label>
+            <div class="ng-autocomplete regInHeight">
+              <ng-autocomplete
+                [data]="organizationList"
+                [(ngModel)]="selectedCompany"
+                [ngModelOptions]="{ standalone: true }"
+                [searchKeyword]="'keyword'"
+                (inputChanged)="onChangeSearch($event)"
+                (inputCleared)="searchCleared()"
+                [itemTemplate]="itemTemplate"
+                [notFoundTemplate]="notFoundTemplate"
+                title="CompanySelection"
+              >
+              </ng-autocomplete>
+              <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.itemName"></a>
+              </ng-template>
+              <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="'Other'"></div>
+              </ng-template>
+            </div>
+            <input
+              *ngIf="selectedCompanyName == 'other'"
+              type="text"
+              class="form-control regInHeight"
+              placeholder="Organization Name"
+              formControlName="organization"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>{{ "AUTH.LANGUAGE" | translate }}</label>
+            <select
+              formControlName="language"
+              class="form-control regInHeight"
+              id="exampleSelect1"
+            >
+              <option *ngFor="let lang of languages" [value]="lang.id">
+                {{ lang.name }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="checkbox mb-0 accept-terms">
+              <input
+                type="checkbox"
+                name="agree"
+                (click)="handleCheckBox($event?.target?.checked)" />{{
+                "HOME.BY_REGISTERING_EVENT" | translate
+              }}
+              <a
+                target="_blank"
+                href="https://www.microsoft.com/en-us/legal/terms-of-use"
+                >{{ "HOME.TERMS_OF_USE" | translate }}</a
+              >
+              {{ "HOME.AND" | translate }}
+              <a
+                target="_blank"
+                href="https://privacy.microsoft.com/en-us/privacystatement"
+                >{{ "HOME.PRIVACY_AND_COOKIES" | translate }}</a
+              >
+              <span></span
+            ></label>
+          </div>
+          <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
+            <button
+              type="submit"
+              style="width: 100%"
+              id="kt_login_signup_submit"
+              class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 regSignUp"
+              [disabled]="!isAcceptTerms"
+            >
+              {{ "AUTH.SIGNUP" | translate }}
+            </button>
+          </div>
+          <!-- <div class="form-group">
+            <label class="mb-0 accept-terms">
+              {{ 'AUTH.ACCEPT_TERMS' | translate }}
+            </label>
+          </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

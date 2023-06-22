@@ -1,0 +1,63 @@
+<!--begin::Header Menu Wrapper-->
+<div #headerMenuOffcanvas class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+  <ng-container *ngIf="!headerMenuSelfDisplay">
+    <!--begin::Header Logo-->
+    <div class="header-logo">
+      <a href="javascript:;" routerLink="/" >
+        <img alt="logo" src="./assets/media/logos/logo-light.png" />
+      </a>
+    </div>
+    <!--end::Header Logo-->
+  </ng-container>
+
+  <!--begin::Header Menu-->
+  <div ktMenu *ngIf="showMenuHeader" id="kt_header_menu" class="header-menu header-menu-mobile " [ngClass]="headerMenuClasses">
+    <!--begin::Header Nav-->
+    <ul *ngIf="showMenuHeader" class="menu-nav" [ngClass]="htmlClassService.getClasses('header_menu_nav', true)">
+			<ng-container *ngFor="let item of headerMenu">
+				<ng-container *ngIf="item.title" [ngTemplateOutlet]="menuTemplate" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+			</ng-container>
+		</ul>
+    <!--end::Header Nav-->
+  </div>
+  <!--end::Header Menu-->
+</div>
+<!--end::Header Menu Wrapper-->
+
+<ng-template #menuTemplate let-item="item" let-parentItem="parentItem">
+	<li [attr.aria-haspopup]="true"
+		[ngClass]="getItemCssClasses(item)">
+		<ng-container *ngIf="!item.submenu">
+			<a [routerLink]="item?.page" class="menu-link">
+				<ng-container [ngTemplateOutlet]="menuItemInnerTemplate" [ngTemplateOutletContext]="{ item: item, parentItem: parentItem }"></ng-container>
+			</a>
+		</ng-container>
+	</li>
+</ng-template>
+
+<!-- item inner -->
+<ng-template #menuItemInnerTemplate let-item="item" let-parentItem="parentItem">
+	<!-- if menu item has icon -->
+	<ng-container *ngIf="item.icon">
+		<i class="menu-icon" [ngClass]="item.icon"></i>
+	</ng-container>
+
+	<ng-container *ngIf="!item.icon">
+		<!-- if menu item using bullet -->
+		<i *ngIf="parentItem && parentItem.bullet === 'dot' || item.bullet === 'dot'" class="menu-link-bullet menu-link-bullet--dot">
+			<span></span>
+		</i>
+		<i *ngIf="parentItem && parentItem.bullet === 'line' || item.bullet === 'line'" class="menu-link-bullet menu-link-bullet--line">
+			<span></span>
+		</i>
+	</ng-container>
+
+	<ng-container>
+		<span class="menu-item-here"></span>
+		<!-- menu item title text -->
+		<span class="menu-text menu-sizechange" [translate]="item.translate">
+			{{item.title}}
+		</span>
+	</ng-container>
+</ng-template>
+

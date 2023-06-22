@@ -1,0 +1,332 @@
+.asDetailCusCard {
+    padding: 30px;
+    height: auto;
+  }
+
+  .card-footer.asDetailCusCardFooter {
+    border-top: 1px solid #d2d4da;
+  }
+  .asDetailCusCardMeet {
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+  }
+  .declineLabel{
+    // position: relative;
+    // left: -48px;
+    // font-weight: bold;
+    width: 150px;
+    height: 23px;
+    text-align: left;
+    font: normal normal medium 16px/25px Poppins;
+    letter-spacing: 0px;
+    color: #1A1A25;
+    text-transform: capitalize;
+    opacity: 1;
+  }
+  .declinebtn{
+    width: 100% !important;
+    background: var(--cancel) 0% 0% no-repeat padding-box !important;
+    background: #D36467 0% 0% no-repeat padding-box !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+    text-align: center !important;
+    font: normal normal medium 16px/25px Poppins !important;
+    letter-spacing: 0px !important;
+    color: #FFFFFF !important;
+  }
+  .declineTxt{
+    color: #D36467;
+    text-align: center;
+    font: normal normal medium 16px/25px Poppins;
+    letter-spacing: 0px;
+    color: #D36467;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .recheduleTxt{
+    color: #3D8BEE;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .backText{
+    color: #565fe0;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .btnChangebgColor{
+    background-color: #e9f0ef !important;
+    border: #e9f0ef !important;
+    color: #2d2c2c !important;
+    
+    font-size: 12px !important;
+  }
+  .btnChangebgColor-primary{
+    background-color: #3D8BEE !important;
+    border: #3D8BEE !important;
+    color: #fff !important;
+    
+    font-size: 12px !important;
+  }
+  .asDetailCusCardMeet a {
+    margin: 15px 0 0 0;
+  }
+  .asDetailCusCardMeet button {
+    font-size: 16px;
+  }
+  
+  .time-format {
+    /* all div's inside the #test */
+    width: 163px;
+    height: 23px;
+    text-align: left;
+    font: normal normal normal 16px/25px Poppins;
+    letter-spacing: 0px;
+    color: #5B5D6A;
+    opacity: 1;
+  }
+  
+  .meetingLinkTxt{
+    width: 170px;
+    text-align: left !important;
+    font: normal normal normal 16px/25px Poppins !important;
+    letter-spacing: 0px !important;
+    color: #5B5D6A !important;
+    opacity: 1 !important;
+  }
+  
+  .time-header {
+    text-align: left;
+    font: normal normal medium 20px/30px Poppins;
+    letter-spacing: 0px;
+    color: #1A1A25;
+    text-transform: capitalize;
+    opacity: 1;
+  }
+  .asDetailCusCardMeet button,
+  .asDetailCusCardMeet a {
+    font-size: 14px;
+  }
+  .msgsBox img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #d9f5f4 0% 0% no-repeat padding-box;
+    border: 1px solid #77c0bb;
+    object-fit: none;
+    margin: 0px 24px 0px 0px;
+  }
+  .card-title.msgsBox {
+    display: flex;
+  }
+  .calender-bg {
+    background-color: #f3f6f9;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #d2d4da;
+    width: 56px;
+    height: 56px;
+    margin: 0 15px 0 0;
+  }
+
+  .declineReasonTxt{
+    width: 225px !important;
+    height: 83px !important;
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 1px solid #D2D4DA !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+  }
+  @media (max-width: 1376px) {
+    .calender-bg {
+      width: 30px;
+      height: 30px;
+      margin: -32px 10px 0 0;
+    }
+    .time-header {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .time-format {
+      font-size: 12px;
+    }
+    .msgsBox img {
+      width: 40px;
+      height: 40px;
+      margin: 0px 10px 0px 0px;
+    }
+    .card-footer {
+      padding: 20px;
+    }
+    .asDetailCusCardMeet button,
+    .asDetailCusCardMeet a {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1034px) {
+    .dlAttachButton {
+      height: 45px;
+      padding: 0 15px;
+      font-size: 14px;
+      width: 100%;
+      margin: 0 0 15px 0;
+    }
+    .activityBox .card-body {
+      padding: 1rem;
+    }
+    .downbtnsGroup {
+      flex-direction: column;
+    }
+    // .asessmentDetailRow {
+    //   flex-direction: column;
+    // }
+  }
+  @media (max-width: 830px) {
+    .asDetailCusCard {
+      margin: 15px 0 0 0;
+      padding: 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    .asDetailCusCard .card-header .asDetailCusCard .card-footer {
+      padding: 0;
+    }
+    .activityBox {
+      padding: 15px 0;
+    }
+    .fileButton {
+      width: 40px;
+      height: 40px;
+    }
+    .activityRow .card {
+      margin: 0 0 0 19px;
+    }
+  }
+  .isSubmitfiles{
+    margin-top:6px !important;
+    background: var(--success) 0% 0% no-repeat padding-box !important;
+    background: #77C0BB 0% 0% no-repeat padding-box !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+  }
+  .isSubmitfiles span{
+    text-align: center !important;
+    font: normal normal medium 16px/25px Poppins !important;
+    letter-spacing: 0px !important;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+  }
+  .btn-close{
+    box-sizing: content-box;
+    width: 2em;
+    height: 2em;
+    padding: 0.25em;
+    color: #000;
+    border: 0;
+    border-radius: 0.375rem;
+    opacity: 0.5;
+    background-color: #e7e5e5;
+  }
+
+  .edbtn {
+    height: 14px;
+    width: 14px;
+    color: #77c0bb;
+  }
+  
+  .addFileText {
+    text-align: left;
+    font: normal normal normal 13px/25px Poppins;
+    letter-spacing: 0px;
+    color: #1A1A25;
+    opacity: 1;;
+  }
+
+  .addFileTextfileName {
+    text-align: left;
+    font: normal normal normal 8px/25px Poppins;
+    letter-spacing: 0px;
+    color: #1A1A25;
+    opacity: 1;;
+  }
+  .attachment-btn {
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px solid #d2d4da;
+    background-color: #f3f6f9;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .attachment-btn-upload{
+    min-width:100px; 
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    background: #F3F6F9 0% 0% no-repeat padding-box;
+    border: 1px solid #D2D4DA;
+    border-radius: 8px;
+    opacity: 1;
+  }
+  .alert-danger {
+    background-color: #F64E60 !important;
+    border-color: #F64E60 !important;
+    color: #ffffff !important;
+    margin-top: 7px !important;
+  }
+  .decliLoader{
+    position: relative !important;
+    top:-205px !important
+  }
+
+  .has-error {
+    color: red;
+  }
+  .submithr{
+    width: 241px !important;
+    margin-left: -23px !important;
+  }
+
+  .isSubmitFormdiv{
+    position: relative !important;
+    left: 16px !important
+  }
+  .isSubmitForm{
+    width: 274px;
+    height: 200px;
+    margin-left: -31px;
+  }
+  .submitUploadFiles{
+    width: 274px;
+    height: 46px;
+    background: #77C0BB 0% 0% no-repeat padding-box;
+    border: 1px solid #77C0BB;
+    border-radius: 8px;
+    opacity: 1;
+    margin-top: 12px;
+  }
+
+  .submitUploadFiles .submitTxt{
+    text-align: center;
+    font: normal normal medium 16px/25px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  .attachFilesheader{
+    text-align: left !important;
+    font: normal normal medium 16px/25px Poppins !important;
+    letter-spacing: 0px !important;
+    color: #1A1A25 !important;
+    opacity: 1 !important;
+  }

@@ -1,0 +1,44 @@
+<!-- begin:: Header Mobile -->
+<div id="kt_header_mobile" class="header-mobile align-items-center" [ngClass]="headerMobileClasses">
+  <!--begin::Logo-->
+  <a routerLink="/">
+	  <img alt="logo" src="./assets/media/logos/logo-light.png"/>
+  </a>
+  <!--end::Logo-->
+
+  <!--begin::Toolbar-->
+  <div class="d-flex align-items-center">
+    <ng-container>
+      <!--begin::Aside Mobile Toggle-->
+      <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+        <span></span>
+      </button>
+      <!--end::Aside Mobile Toggle-->
+    </ng-container>
+
+    <ng-container>
+      <!--begin::Header Menu Mobile Toggle-->
+      <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
+        <span></span>
+      </button>
+      <!--end::Header Menu Mobile Toggle-->
+    </ng-container>
+
+    <!--begin::Topbar Mobile Toggle-->
+    <div ngbDropdown class="d-inline-block">
+      <button ngbDropdownToggle class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+        <span [inlineSVG]="'./assets/media/svg/User.svg'" class="svg-icon svg-icon-xl"></span>
+      </button>
+      <!-- <button class="btn btn-success" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button> -->
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button (click)="logout()" class="dropdown-item">
+          <span class="mr-5">{{ "AUTH.LOGOUT" | translate }}</span>
+          <span class="material-icons"> logout </span>
+        </button>
+      </div>
+    </div>
+    <!--end::Topbar Mobile Toggle-->
+  </div>
+  <!--end::Toolbar-->
+</div>
+<!-- end:: Header Mobile -->

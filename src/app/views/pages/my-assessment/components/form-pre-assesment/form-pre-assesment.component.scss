@@ -1,0 +1,131 @@
+label p img {
+  height: 32px;
+  object-fit: contain;
+}
+
+label p {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.attachment-btn {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  border: 1px solid #d2d4da;
+  background-color: #f3f6f9;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.edbtn {
+  height: 14px;
+  width: 14px;
+  color: #77c0bb;
+}
+
+.addFileText {
+  font-size: 16px;
+}
+
+.closeBtn {
+  color: #d36467;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+  font-size: 20px !important;
+}
+
+.attachBtn {
+  width: 22px;
+  height: 11px;
+  color: #b5b5c1;
+}
+
+.question {
+  font-size: 16px;
+  vertical-align: sub;
+  font-weight: 500;
+}
+
+.paddingStart {
+  padding-inline-start: 40px;
+  font-size: 16px !important;
+  margin: 10px 0 0 0 !important;
+}
+
+.preAssType {
+  font-size: 16px;
+}
+
+.exPopOver {
+  display: inline-block;
+}
+.infoIconPos-prerqs{
+  margin: 0 0px 0 10px;
+  color: #3699ff;
+  cursor: pointer;
+}
+
+.infoIconPos {
+  position: relative !important;
+  top: -45px !important;
+  left: 490px !important;
+  z-index: 99 !important;
+  color: #ff0505;
+}
+
+.popOvrIcon {
+  position: relative;
+  left: 2px;
+  top: 0;
+}
+
+.popOvrHeading {
+  margin-left: 13px;
+}
+
+.popOvrBottom {
+  position: relative !important;
+  top: 3% !important;
+  left: 2px !important;
+}
+
+.popOvrBottom ul {
+  list-style-type: none !important;
+}
+
+.popOvrBottom ul li {
+  background: url("../../../../../../assets/media/images/chain-icon.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 17px 13px !important;
+  background-position: 0 2px !important;
+  margin-left: -26px !important;
+  padding-left: 24px !important;
+}
+
+.resourcesTxt {
+  color: #000 !important;
+  text-align: left !important;
+  font: normal normal 600 11px/18px Poppins !important;
+  letter-spacing: 0.38px !important;
+  color: #1a1a25 !important;
+  text-transform: uppercase !important;
+  opacity: 1 !important;
+}
+
+:host >>> .popover {
+  width: 300px !important;
+}
+
+//   ::ng-deep popover-container {
+
+//     width:300px !important;
+//     height: auto;
+// }
+
+// ::ng-deep .bs-popover-bottom>.arrow::after {
+//     border-bottom-color: black !important;
+// }

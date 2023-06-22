@@ -1,0 +1,90 @@
+.active-assessment-container .progress {
+  border-radius: 0 !important;
+}
+
+.assessment-status {
+  color: #5b5d6a !important;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 15px;
+}
+
+.assessment-footer {
+  background-color: #f3f6f9 !important;
+  padding: 1rem 2rem;
+}
+
+.profile-name {
+  color: #1a1a25 !important;
+}
+
+.microsoft_logo {
+  width: 28px;
+}
+
+.assessment-title {
+  font-weight: 600 !important;
+  font-size: 21px !important;
+  text-transform: capitalize;
+}
+
+.no-bottom-border {
+  border-bottom: none !important;
+}
+
+.status-width100 {
+  width: 100% !important;
+}
+.status-width0 {
+  width: 0 !important;
+}
+
+@media (max-width: 1376px) {
+  .assessment-title {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 490px) {
+  .assessment-title {
+    font-size: 14px !important;
+  }
+  .assessment-status {
+    font-size: 12px;
+  }
+  .aaInfoBox {
+    flex-wrap: nowrap;
+  }
+  .aaInfoStatus {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .aaInfoStatus:nth-child(2) {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    background: #28a745;
+    color: #fff;
+    height: 25px;
+  }
+  .aaInfoStatus > div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .aaInfoStatus:nth-child(2) > div > span {
+    color: #fff !important;
+    font-size: 14px !important;
+  }  
+  .aaInfoStatus > div > span {
+    font-size: 14px !important;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,58 @@
+<ng-container *ngIf="form">
+  <form [formGroup]="form" id="assesment-form" (ngSubmit)="onSubmit(form.value)">
+    <div class="pb-5">
+      <h3 class="wizTitle">
+        {{ "NEW_ASSESSMENT.PRE_REQUISITE" | translate }}
+      </h3>
+      <div *ngIf="!loading">
+        <div *ngFor="let preData of preRequisites; let i = index">
+          <label class="wizSecTitle"><span class="mr-5">{{ i + 1 }}</span>
+            <div [ngClass]="{'has-error':hasErrors(preData.id)}"> 
+              {{ preData?.question }}<div class="exPopOver"><i *ngIf="preData?.helpText !null" class="fa fa-info-circle infoIconPos-prerqs" placement="right"
+                [ngbPopover]="popContent" [popoverTitle]="popTitle"></i></div>
+            </div>
+          </label>
+          <ng-template #popTitle><div class="popOvrIcon" *ngIf="preData?.helpText !null"><img src="../../../../../../assets/media/images/popoverIcon.png" width="25" height="25"></div></ng-template>
+          <ng-template  #popContent>
+            <div *ngIf="preData?.helpText != null" [innerHTML]="preData?.helpText"></div>
+          </ng-template>
+          <div *ngIf="preData?.answerType === 0">
+            <div class="form-group ml-10">
+              <div class="radio-list">
+                <label *ngFor="let answer of preData?.answersArray" class="radio radio-outline radio-outline-2x">
+                  <input [formControlName]="generateId(preData.id)" value="{{ answer }}" type="radio"
+                    id="answer{{ i }}" />
+                  <span></span>
+                  {{ answer }}
+                </label>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="preData?.answerType === 1">
+            <div class="form-group ml-10">
+              <div class="radio-list">
+                <div *ngFor="let answer of preData?.answersArray" class="form-check">
+                  <input [formControlName]="generateId(preData.id)" class="form-check-input" type="checkbox"
+                    [value]="answer" id="flexCheckDefault" name="answer{{ preData?.id }}" />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    {{ answer }}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="preData?.answerType === 2">
+            <div class="form-group ml-10">
+              <input type="text" [formControlName]="generateId(preData.id)" class="form-control wizTextInput"
+                placeholder="" />
+            </div>
+          </div>
+          <hr class="wizSep" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+    </div>
+  </form>
+</ng-container>

@@ -1,0 +1,100 @@
+<div class="subheader py-2 py-lg-4 subheader-solid subheader-pos">
+  <div
+    class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
+  >
+    <div class="d-flex align-items-center flex-wrap mr-2">
+      <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5 main-header">
+        {{ "HEADER.COMPLETED_ASSESSMENT" | translate }}
+      </h5>
+    </div>
+    <div class="d-flex align-items-center">
+      <button
+        (click)="navigateNewAssessmentPage()"
+        type="button"
+        class="btn btn-primary"
+      >
+        {{ "HEADER.START_A_NEW_ASSESSMENT" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row" *ngIf="completedAssessment?.length">
+    <div class="col-lg-6 pb-5" *ngFor="let assessment of completedAssessment">
+      <div
+        class="card card-custom cursor-pointer"
+        (click)="
+          navigateAssessmentPage(assessment?.serviceTypeId, assessment?.id)
+        "
+      >
+        <div class="card-header card-header-tabs-line no-bottom-border">
+          <div class="card-title">
+            <span class="card-icon">
+              <img
+                *ngIf="assessment?.serviceTypeId === 2"
+                class="microsoft_logo"
+                src="../../../../../../assets/media/images/windows server.svg"
+              />
+              <img
+                *ngIf="assessment?.serviceTypeId === 1"
+                src="../../../../../../assets/media/images/SQL sever.svg"
+                alt=""
+              />
+            </span>
+            <h1 class="card-label assessment-title">
+              {{
+                (assessment?.serviceTypeId === 1
+                  ? "NEW_ASSESSMENT.SQL_SERVER_MIGRATION"
+                  : "NEW_ASSESSMENT.WINDOWS_SERVER_MIGRATION"
+                ) | translate
+              }}
+            </h1>
+          </div>
+          <div class="card-toolbar">
+            <a href="#" class="btn btn-light-primary font-weight-bold mr-2"
+              >Completed</a
+            >
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+              <span> <i class="far fa-calendar"></i> </span>
+              <span class="ml-4">{{
+                "ACTIVE_ASSESSMENT.COMPLETED_ON" | translate
+              }}</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="ml-4">{{
+                getFormattedDate(assessment?.completedOn)
+              }}</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-footer assessment-footer">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+              <div class="symbol symbol-circle symbol-lg-35">
+                <img
+                  src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                  alt="image"
+                />
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <span class="font-weight-normal profile-name">Walter Cook</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!completedAssessment?.length && !loading" class="noDatabg">
+    <!-- <span class="material-icons"> cloud_off </span> -->
+    <img class="no-data-img" src="../../../../../../assets/media/images/no-data.png" />
+    <p>{{ "NEW_ASSESSMENT.NO_COMPLETED_ASSESSMENT" | translate }}</p>
+  </div>
+  <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+</div>

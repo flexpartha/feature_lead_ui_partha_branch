@@ -1,0 +1,19 @@
+<div class="demo-tab-content" *ngFor="let  preassessmentList of preAssementMap; let i=index;">
+    <div class="wizCheckWrap">
+        <label class="checkbox checkbox-success">
+          <!-- <input type="checkbox" name="Checkboxes5" checked="{{preassessmentList.answer}}" /> -->
+          <!-- <span></span> -->
+          {{preassessmentList.preAssessment.question}}
+      </label>
+      <div class="card-toolbar">
+        <a class="btn btn-light-success font-weight-bold mr-2"
+          >{{preassessmentList.preAssessment.type}}</a
+        >
+      </div>
+      <!-- <div class="innerContent"  [innerHTML]="preassessmentList.preAssessment.answers | specialPipe"></div> -->
+      <div *ngFor="let ansr of preassessmentList?.addedanswer">
+        <span>{{ansr.answer}}</span><span>{{ansr.permission}}</span>
+      </div>
+    </div>
+</div>
+

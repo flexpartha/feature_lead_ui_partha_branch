@@ -1,0 +1,33 @@
+:host {
+  ::ng-deep {
+    // override default version style
+    .topbar {
+      > :last-child:not([role="tooltip"]) {
+        .topbar-item {
+          margin-right: 0 !important;
+        }
+      }
+      .topbar-item {
+        margin-right: 0.36rem !important;
+      }
+    }
+  }
+}
+.langDrop {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 10px 0 0;
+}
+.langDrop span:nth-child(2) {
+  margin: 0 5px 0 10px;
+}
+.langDrop span:nth-child(1) {
+  font-size: 18px !important;
+}
+.langDrop span:nth-child(3) {
+  font-size: 16px !important;
+  color: #1a1a25 !important;
+  display: none;
+}

@@ -1,0 +1,63 @@
+<!-- begin:: Footer -->
+<div
+  class="footer bg-white py-4 d-flex flex-lg-column"
+  id="kt_footer"
+  [ngClass]="footerClasses"
+>
+  <div
+    [ngClass]="footerContainerClasses"
+    class="d-flex flex-column flex-md-row align-items-center justify-content-between metroFoot"
+  >
+    <!--begin::Copyright-->
+    <div class="text-dark order-2 order-md-1 dashFoot footerMobile">
+      <p>{{ currentYear }} © {{ "HOME.MICROSOFT_CORPORATION" | translate }}</p>
+    </div>
+    <!--end::Copyright-->
+
+    <!--begin::Nav-->
+    <div
+      class="nav nav-dark order-1 order-md-2 d-flex align-items-center dashFoot"
+    >
+      <p>
+        <span
+          ><a href="https://support.microsoft.com/contactus" target="_blank"
+            >{{ "HOME.CONTACT_MICROSOFT" | translate }}
+            <i class="fas fa-external-link-alt"></i></a
+        ></span>
+        <span class="fooDivider">|</span>
+        <span
+          ><a
+            href="https://privacy.microsoft.com/en-us/privacystatement"
+            target="_blank"
+            >{{ "HOME.PRIVACY_AND_COOKIES" | translate
+            }}<i class="fas fa-external-link-alt"></i></a
+        ></span>
+        <span class="fooDivider">|</span>
+        <span
+          ><a
+            href="https://www.microsoft.com/en-us/legal/terms-of-use"
+            target="_blank"
+            >{{ "HOME.TERMS_OF_USE" | translate }}
+            <i class="fas fa-external-link-alt"></i></a
+        ></span>
+        <span class="fooDivider">|</span>
+        <span
+          ><a
+            href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+            target="_blank"
+            >{{ "HOME.TRADEMARKS" | translate }}
+            <i class="fas fa-external-link-alt"></i></a
+        ></span>
+        <span class="fooDivider">|</span>
+        <span
+          ><a
+            href="https://www.microsoft.com/en-us/legal/compliance/devices-safety-and-eco"
+            target="_blank"
+            >{{ "HOME.SAFETY_AND_EC" | translate }}
+            <i class="fas fa-external-link-alt"></i></a
+        ></span>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end:: Footer -->

@@ -1,0 +1,94 @@
+{
+  "MENU": {
+    "MY_ASSESSMENT": "My Assessments",
+    "COMPLETED_ASSESSMENT": "Completed Assessments",
+    "ACTIVE_ASSESSMENT": "Active Assessments",
+    "EXPERTS": "Experts",
+    "DECLINED_ASSESSMENT": "Declined Assessment"
+  },
+  "AUTH": {
+    "LOGOUT": "Logout",
+    "REGISTRATION": "Registration",
+    "ENTER_DETAILS_FOR_REGISTRATION": " Enter your details to create your account",
+    "FIRST_NAME": "FIRST NAME",
+    "LAST_NAME": "LAST NAME",
+    "EMAIL": "EMAIL",
+    "ORGANIZATION": "ORGANIZATION",
+    "COUNTRY": "COUNTRY",
+    "LANGUAGE": "LANGUAGE",
+    "SIGNUP": "Sign Up",
+    "ACCEPT_TERMS": "By registering for this event, I accept the Terms of Use and Privacy and Cookies"
+  },
+  "ACTIVE_ASSESSMENT": {
+    "UNDER_REVIEW": "UNDER REVIEW",
+    "ASSESSMENT": "ASSESSMENT",
+    "COMPLETED": "COMPLETED",
+    "COMPLETED_ON": "COMPLETED ON"
+  },
+  "HEADER": {
+    "ACTIVE_ASSESSMENT": "Active Assessments",
+    "COMPLETED_ASSESSMENT": "Completed Assessments",
+    "SUPPORT": "Support",
+    "START_A_NEW_ASSESSMENT": "Start A New Assessment",
+    "DECLINED_ASSESSMENT": "Declined Assessment"
+  },
+  "NEW_ASSESSMENT": {
+    "TITLE": "New Assessment",
+    "STEP": {
+      "SET_UP": "SET UP",
+      "PRE_REQUISITE": "PRE-REQUISITE",
+      "PRE_ASSESSMENT": "PRE-ASSESSMENT",
+      "BOOK_ASSESSMENT": "BOOK ASSESSMENT"
+    },
+    "PRE_REQUISITE": "Pre-Requisite",
+    "ASSESSMENT_SET_UP": "Assessment Set Up",
+    "SELECT_SERVICE_TYPE": "Select Service Type",
+    "WINDOWS_SERVER_MIGRATION": "Windows server migration",
+    "SQL_SERVER_MIGRATION": "SQL server migration",
+    "BOOK_ASSESSMENT": "Book Assessment",
+    "NO_COMPLETED_ASSESSMENT" :"There are no completed assessments",
+    "NO_ACTIVE_ASSESSMENT": "There are no active assessments",
+    "NO_ACTIVE_ACTIVITIES": "There are no active activities",
+    "NO_DECLINED_ASSESSMENT": "There are no declined assessment"
+  },
+  "COMMON": {
+    "BACK": "Back",
+    "NEXT": "Next",
+    "CANCEL": "Cancel",
+    "SAVE_CHANGES": "Save Changes",
+    "PREVIOUS": "Previous",
+    "SAVE": "Save",
+    "ADD_FILE" : "Add File",
+    "UPDATE_ASSESSMENT": "Update Assessment",
+    "CREATE_ASSESSMENT": "Create Assessment"
+  },
+  "ASSESSMENT_DETAILS": {
+    "TITLE": "Assessment Detail",
+    "ACTIVITIES": "Activities",
+    "PRE_REQUISITE": "Pre-Requisite",
+    "PRE_ASSESSMENT": "Pre-Assessment",
+    "DATE_TIME": "Date & Time",
+    "APPOINTMENT_VIA": "Appointment Via",
+    "TEAMS_MEETING": "Microsoft Teams Meeting",
+    "JOIN_MEETING": "Join Meeting",
+    "RESCHEDULE_MEETING": "Reschedule Meeting",
+    "ACCEPT_ASSESSMENT": "Accept Assessment",
+    "ASSESSMENT_DECLINED": "Assessment Declined"
+  },
+  "HOME": {
+    "SIGN_IN": "Sign In",
+    "REGISTER_OR_SIGNIN": "Register / Sign In",
+    "MICROSOFT_CORPORATION": "Microsoft Corporation. All rights reserved. This site is hosted for Microsoft by Spektra Systems LLC.",
+    "CONTACT_MICROSOFT": "Contact Microsoft",
+    "PRIVACY_AND_COOKIES": "Privacy and Cookies",
+    "TERMS_OF_USE": "Terms of Use",
+    "TRADEMARKS": "Trademarks",
+    "SAFETY_AND_EC": "Safety & ec",
+    "BY_REGISTERING_EVENT": "By registering for this event, I accept the",
+    "AND": "and",
+    "HOW_IT_WORKS": "How it works",
+    "HOW_WORK_EXPLANATION": "Migration Assessments help customers work through a scenario of questions, a working session with an expert and recommendations that result in a curated guidance report that is actionable and informative. Assessments take time but time is well-spent.",
+    "CLOUD_ADOPTION_MIGRATION": "Cloud Adoption - Migration",
+    "CLOUD_ADOPTION_SUB_HEAD": "Assess how ready your organization and Windows Server / SQL workloads are to move to Azure and get expert curated guidance, tools and help to move forward in your Azure cloud journey"
+  }
+}

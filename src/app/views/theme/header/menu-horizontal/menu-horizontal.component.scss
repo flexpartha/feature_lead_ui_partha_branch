@@ -1,0 +1,15 @@
+:host {
+	width: 100%;
+
+	.header-menu-wrapper {
+		height: 100%;
+	}
+	.menu-item-active {
+		border-bottom: 2px solid #3699FF !important;
+	}
+}
+
+.menu-sizechange {
+	font-size: 16px !important;
+	color: #1A1A25 !important;
+}

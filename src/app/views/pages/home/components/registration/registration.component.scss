@@ -1,0 +1,306 @@
+// import login css
+@import "../../../../../../assets/sass/pages/login/login-3.scss";
+
+kt-auth,
+#kt_login_wrapper {
+  height: 100vh;
+
+  @media (min-width: 992px) {
+    .login.login-3 .login-form {
+      width: 100%;
+      max-width: 45%;
+    }
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 580px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+kt-auth,
+.login {
+  // height: 100%;
+
+  .login-form {
+    width: 100%;
+    max-width: 580px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+
+  // add extra right padding when displaying spinner in button
+  .spinner {
+    padding-right: 3rem !important;
+  }
+}
+
+kt-login,
+kt-register,
+kt-forgot-password {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex !important;
+}
+
+.height-100 {
+  height: 100%;
+}
+@media (min-width: 992px) {
+  form#kt_login_signup_form {
+    width: 580px;
+  }
+}
+@media (max-width: 480px) {
+  .overflow-hidden.regRight {
+    overflow: auto !important;
+  }
+  kt-register {
+    justify-content: unset !important;
+    align-items: unset !important;
+    flex: unset !important;
+    height: 100% !important;
+    display: unset !important;
+  }
+}
+
+.regPage {
+  height: 100vh;
+}
+
+.login.login-1.login-signin-on .login-signup {
+  display: block !important;
+}
+.regFooter {
+  display: none !important;
+}
+.msgsTitle h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.msgsTitle p {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.8;
+  margin: 16px 0 0 0;
+}
+
+.msgsBox h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.msgsBox p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.msgsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 34px 0 0 0;
+  padding: 0 15px 34px 0;
+  border-bottom: 1px solid #707070;
+}
+
+.msgsBox span {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #d9f5f4 0% 0% no-repeat padding-box;
+  border: 1px solid #77c0bb;
+  -o-object-fit: none;
+  object-fit: none;
+  margin: 0px 24px;
+  color: #77C0BB;
+  min-width: 56px;
+  display: grid;
+  place-content: center;
+}
+.msbPad {
+  padding: 0 6%;
+}
+
+.logoReg a img {
+  height: 32px;
+  object-fit: contain;
+}
+.logoReg {
+  width: 100%;
+  margin: 0 0 56px 0;
+}
+.regInBorder {
+  border: 1px solid #d2d4da;
+}
+.regInHeight {
+  height: 56px;
+}
+
+.regInPad {
+  padding: 16px 0;
+}
+.accept-terms {
+  color: #5b5d6a;
+}
+// ---------------------------------- Media Query
+@media (min-width: 992px) {
+  .login.login-1 .login-aside {
+    width: 100%;
+    max-width: 45%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .login.login-1 .login-content {
+    width: 100%;
+    max-width: 580px;
+  }
+  .login.login-1 .login-content .login-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .msgsBox {
+    margin: 20px 0 0 0;
+    padding: 0 15px 20px 0px;
+  }
+  .regTitle {
+    padding: 0 !important;
+  }
+  .regInPad {
+    padding: 10px 0;
+  }
+  .regInHeight {
+    height: 44px;
+  }
+}
+@media (max-width: 1440px) {
+  .msgsBox {
+    margin: 16px 0 0 0;
+    padding: 0 15px 16px 0;
+  }
+  .msgsBox p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .regInPad {
+    padding: 10px 0;
+  }
+  .regInHeight {
+    height: 44px;
+  }
+  .regSignUp {
+    height: 44px;
+  }
+  .msgsBox p {
+    margin: 0;
+  }
+}
+@media (max-width: 1366px) {
+  .msgsTitle h2 {
+    font-size: 24px;
+  }
+  .msgsTitle p {
+    font-size: 14px;
+  }
+  .logoReg {
+    margin: 0 0 30px 0;
+  }
+  .msgsBox h2 {
+    font-size: 32px;
+  }
+  .msgsBox span {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin: 0px 20px;
+  }
+  .msgsBox {
+    margin: 10px 0 0 0;
+    padding: 0 10px 10px 0;
+  }
+  .font-size-h1-lg {
+    font-size: 24px !important;
+  }
+  .font-size-h4 {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1034px) {
+  .regRight {
+    background-image: linear-gradient(to bottom, #000000b3, #1a1a25b3),
+      url(../../../../../../assets/media/images/register.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .regDashPage {
+    margin: 0 !important;
+  }
+  .regTitle h3 {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+  }
+  .regTitle p {
+    color: #ffffff !important;
+    font-weight: 300 !important;
+  }
+  #kt_login_signup_form label {
+    color: #ffffff;
+    font-weight: 300;
+  }
+  #kt_login_signup_form input,
+  #kt_login_signup_form select {
+    background: transparent;
+    border-radius: 4px !important;
+    margin: 0 0 15px 0;
+    color: #fff;
+    border: 1px solid #424242 !important;
+    font-weight: 300;
+  }
+  #kt_login_signup_form input::placeholder,
+  #kt_login_signup_form select::placeholder {
+    color: #424242 !important;
+  }
+  #kt_login_signup_form select option {
+    background: #1a1a25;
+  }
+}
+@media (max-width: 830px) {
+}
+
+@media (max-width: 768px) {
+  .lastName {
+    padding: 15px 15px 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  .regTitle {
+    padding: 0 !important;
+  }
+  kt-auth,
+  #kt_login_wrapper {
+    height: 100vh;
+  }
+}
+
+
+

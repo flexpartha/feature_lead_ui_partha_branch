@@ -1,0 +1,123 @@
+
+<div class="card card-custom asDetailCusCard">
+    <div class="card-header card-header-tabs-line no-bottom-border">
+      <div class="card-title">
+        <span class="card-icon">
+          <div class="calender-bg">
+            <span class="material-icons"> event </span>
+          </div>
+        </span>
+        <div class="card-label">
+          <div class="time-header">{{'ASSESSMENT_DETAILS.DATE_TIME' | translate}}</div>
+          <div class="time-format"><span> {{
+            getFormattedDate(this.bookingDateTime)
+          }}</span>
+        </div>
+          <div class="time-format">{{
+            getFormattedTime(this.bookingDateTime)
+            }} {{timezneDescription}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+
+    </div>
+    <div class="card-footer asDetailCusCardFooter">
+      <div class="card-title msgsBox">
+        <img src="../../../../assets/media/images/cam.png" alt="">
+        <div class="card-label">
+          <div class="time-header">{{'ASSESSMENT_DETAILS.APPOINTMENT_VIA' | translate}}</div>
+          <div class="time-format">Microsoft Teams Meeting</div>
+          <!-- <div class="time-format">09:00 Am, India (GMT+5:30)</div> -->
+        </div>
+      </div>
+      <div class="asDetailCusCardMeet d-flex">
+        <button type="reset"  *ngIf="isShowAppoint" class="btn btn-success" (click)="acceptAssessment()">{{assessmentButtonText | translate}}</button>
+        <button type="reset"  *ngIf="isJoinggrey" class="btn btn-success btnChangebgColor">{{'ASSESSMENT_DETAILS.JOIN_MEETING' | translate}}</button>
+        <button type="reset"  *ngIf="isJoingBlue" class="btn btn-success btnChangebgColor-primary" (click)="joinMeeting()">{{'ASSESSMENT_DETAILS.JOIN_MEETING' | translate}}</button>
+        <button type="reset"  *ngIf="isSubmitFiles" class="btn btn-success isSubmitfiles" (click)="submitFiles()"><span>Submit Files</span></button>
+        
+        <!-- <a href="#">Reschedule Meeting</a> -->
+        <!-- <a  class="declineTxt" *ngIf="isShowDeclineLink" (click)="declineMeeting()">Decline Request</a> -->
+        <!-- <a  class="recheduleTxt" *ngIf="isRecheduleMeeting">Rechedule Meeting</a> -->
+          <!-- <div class="form-group" *ngIf="isShowDecline">
+            <form [formGroup]="declineFormGrp"  (ngSubmit)="decline()">
+                <label for="reasonfor decline" class="declineLabel" [ngClass]="{'has-error':declineFormGrp.get('declineReson')?.value ==''}">Decline Reason*</label>
+                <textarea class="form-control declineReasonTxt" formControlName="declineReson" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <br/>
+                <button type="submit" class="btn btn-secondary declinebtn">Decline</button>
+                <br/>
+                <a  class="backText" *ngIf="isShowDecline" (click)="back()">Back</a>
+            </form>
+          </div> -->
+      </div>
+      <!-- Submit file section starts here -->
+      <div class="form-group" *ngIf="isSubmitFilesSec">
+        <hr class="submithr">
+        <form [formGroup]="submitActivityFormGrp"   (ngSubmit)="submitActivityFiles()" class="isSubmitForm">
+          <div class="attachFilesheader">Attach Files</div>
+          <div class="row">
+            <div class="col-md-6">
+                <!-- <div class="row ml-5"> -->
+                  <div class="attachment-btn-upload mb-4" *ngFor="let file of uploadedFiles; let i=index;">
+                    <span class="material-icons attachBtn mr-3">
+                      attachment </span
+                    ><span class="addFileText">{{ file }}</span>
+                    <span
+                      class="material-icons closeBtn" 
+                      (click)="removeFile(i)">
+                      close
+                    </span>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div class="col-md-6">
+              <div class="isSubmitFormdiv">
+                <button type="button" (click)="fileInput.click()" class="attachment-btn">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <span
+                      (change)="
+                        onChangeHandler($event?.target?.files)
+                      "
+                      class="material-icons edbtn mr-5"
+                    >
+                      add
+                    </span>
+                    <span class="addFileText">{{
+                      "COMMON.ADD_FILE" | translate
+                    }}</span>
+                  </div>
+                  <input
+                    #fileInput
+                    type="file"
+                    (change)="
+                      onChangeHandler($event?.target?.files)
+                    "
+                    style="display: none"
+                    multiple
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="reasonfor decline">Description</label>
+              <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="submitUploadFiles"><span class="submitTxt">Submit</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Submit file section ends here -->
+    </div>
+</div>
+<div
+      class="d-flex justify-content-center align-items-center decliLoader"
+      *ngIf="declineLoader"
+    >
+      <mat-spinner diameter="40"></mat-spinner>
+</div>

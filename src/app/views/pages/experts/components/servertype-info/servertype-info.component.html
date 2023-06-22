@@ -1,0 +1,20 @@
+
+<div class="card-title">
+    <span class="card-icon">
+      <img
+      *ngIf="serviceType.serviceTypeId === 2"
+      class="microsoft_logo"
+      src="../../../../../../assets/media/images/windows server.svg"
+      />
+      <img
+      *ngIf="serviceType.serviceTypeId === 1"
+      src="../../../../../../assets/media/images/SQL sever.svg"
+      alt=""
+      />
+    </span>
+    <h1 class="card-label assessment-title">
+      {{
+        (serviceType.serviceTypeId === 1 ? "NEW_ASSESSMENT.SQL_SERVER_MIGRATION": "NEW_ASSESSMENT.WINDOWS_SERVER_MIGRATION") | translate
+      }}
+    </h1>
+</div>

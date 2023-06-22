@@ -1,0 +1,64 @@
+<div class="subheader py-2 py-lg-4 subheader-solid subheader-pos">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+        <div class="d-flex align-items-center flex-wrap mr-2">
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">
+                {{ "ASSESSMENT_DETAILS.TITLE" | translate }}
+              </h5>
+        </div>
+        <div class="d-flex align-items-center">
+            <button type="submit" class="btn btn-secondary" (click)="redirectToExpert()">
+              {{ "COMMON.BACK" | translate }}
+            </button>
+          </div>
+    </div>
+</div>
+<div
+      class="d-flex justify-content-center align-items-center"
+      *ngIf="loading"
+    >
+      <mat-spinner diameter="40"></mat-spinner>
+    </div>
+<div class="container-fluid">
+    <div class="row asessmentDetailRow" *ngIf="expertassessmentRes">
+        <div class="col-lg-8">
+            <div class="card card-custom mobileCard">
+                <div class="card-header card-header-tabs-line no-bottom-border">
+                  <kt-servertype-info class="kt-servertype-info" [serviceType]="expertassessmentRes"></kt-servertype-info>
+                </div>
+                <div class="card-body">
+                  <kt-active-assessment [chngProgressbarAS]="UnderAssessmentStatus" [chngProgressbar]="underReviewStatus" [chngProgressbarCompleted]="underCompletedStatus" [requesterNm]="expertassessmentRes.assessmentRequesterName"></kt-active-assessment>
+                </div>
+                <div class="card-footer details-footer">
+                    <mat-tab-group class="demo-tab-group">
+                        <mat-tab label="Activities">
+                          <kt-activities [activitydetails]="activityDetails" [activitityObj]="activityFromUpload" [ActivitiesList]="activityResultfromAppontment"></kt-activities>
+                          <!-- <div  class="noDatabg">
+                            <span class="material-icons"> cloud_off </span>
+                            <img class="no-data-img" src="../../../../../../assets/media/images/no-data.png" />
+                            <p>{{ "NEW_ASSESSMENT.NO_ACTIVE_ACTIVITIES" | translate }}</p>
+                          </div> -->
+                        </mat-tab>
+                        <mat-tab label="Pre-Requisite">
+                          <div class="d-flex justify-content-center align-items-center"
+                            *ngIf="loading">
+                            <mat-spinner diameter="40"></mat-spinner>
+                          </div>
+                            <kt-pre-requisite [preRequisiteMap]="preRequisiteMapping"></kt-pre-requisite>
+                        </mat-tab>
+                        <mat-tab label="Pre-Assessment">
+                          <kt-pre-assessment [preAssementMap]="preAssmentMapping"></kt-pre-assessment>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+          <kt-appointment [bookingDateTime]="bookingDateTime" [activitydetails]="activityDetails" (changeStatusBg)="changeStatusBg($event)" (changeStatusBgAs)="changeStatusBgAs($event)" (dispatchActivity)="dispatchActivityRes($event)"></kt-appointment>
+        </div>
+    </div>
+    <!-- <div *ngIf="!allAssessments?.length && !loading" class="noDatabg">
+      <span class="material-icons"> cloud_off </span>
+      No Data Found
+    </div> -->
+    
+</div>

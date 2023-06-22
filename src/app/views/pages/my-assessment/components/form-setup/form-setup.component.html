@@ -1,0 +1,52 @@
+<form id="assesment-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <div class="form-group row">
+    <div class="col-12 col-form-label">
+      <h3 class="wizTitle">
+        {{ "NEW_ASSESSMENT.ASSESSMENT_SET_UP" | translate }}
+      </h3>
+      <label class="mt-5">{{
+        "NEW_ASSESSMENT.SELECT_SERVICE_TYPE" | translate
+      }}</label>
+      <div *ngIf="!loading" class="radio-inline step1RadioRev">
+        <span *ngFor="let serviceType of serviceTypes">
+          <label class="radio radio-outline radio-outline-2x radio-primary">
+            <p>
+              <img
+                *ngIf="serviceType.id === 1"
+                src="../../../../../../assets/media/images/SQL sever.svg"
+                alt=""
+              />
+              <img
+                *ngIf="serviceType.id === 2"
+                src="../../../../../../assets/media/images/windows server.svg"
+                alt=""
+              />
+              {{ serviceType.title }}
+            </p>
+            <input
+              type="radio"
+              name="serviceTypeId"
+              [value]="serviceType.id"
+              [checked]="isChecked(serviceType.id)"
+              (click)="onSelect(serviceType.id, 'serviceTypeId')"
+            />
+            <span></span>
+          </label>
+        </span>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center"
+        *ngIf="loading"
+      >
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+    </div>
+    <!-- <div class="col-12">
+      <div *ngIf="form.controls['serviceTypeId'].invalid" class="alert">
+        <div *ngIf="form.controls['serviceTypeId'].errors.required">
+          Please enter username
+        </div>
+      </div>
+    </div> -->
+  </div>
+</form>

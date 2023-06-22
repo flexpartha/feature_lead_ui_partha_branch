@@ -1,0 +1,230 @@
+label p img {
+    height: 32px;
+    object-fit: contain;
+  }
+  
+  label p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+  }
+  
+.wizTitle {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #1a1a25;
+  margin: 0 0 24px 0;
+}
+
+.wizSecTitle {
+  display: flex;
+  align-items: baseline;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #1a1a25;
+  font-weight: 500;
+}
+
+.wizSecTitle span {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  background: #f3f6f9 0% 0% no-repeat padding-box;
+  border: 1px solid #d2d4da;
+  opacity: 1;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+}
+
+.wizSep {
+  border: none;
+  margin: 32px 0;
+  height: 1px;
+  background: #d2d4da;
+}
+
+.wizTextInput {
+  height: 56px;
+  border: 1px solid #d2d4da;
+  border-radius: 8px;
+  margin: 12px 0 0 0;
+}
+
+.wizDdBox label {
+  text-align: left !important;
+}
+
+.wizDdWrap {
+  display: flex;
+}
+
+.wizDdBox {
+  width: 292px;
+  margin: 0 15px 0px 0;
+}
+
+.wizUserWrap {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #d2d4da;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 25px;
+  margin: 30px 0 0 0;
+}
+
+.wizUhead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wizUheadLeft i {
+  margin: 0 5px 0 0;
+}
+
+.wizUheadLeft {
+  display: flex;
+}
+
+.wizUheadRight p label {
+  /* flex-direction: row-reverse; */
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 30px 0px 0px;
+  align-items: center;
+}
+
+.wizUheadRight span.material-icons {
+  margin: 0 5px;
+}
+
+.wizUheadRight p label i {
+  margin: 0 5px 0 0;
+}
+
+.wizUheadRight .radio > span {
+  right: 0 !important;
+  left: unset !important;
+}
+
+.wizUheadRight p {
+  display: flex;
+  align-items: center;
+}
+
+.wizUCDd {
+  width: 292px;
+  margin: 0 0 30px 0;
+}
+
+.wizProfile img {
+  width: 32px;
+  height: 32px;
+}
+.date-button {
+  background-color: transparent;
+  border: none;
+}
+
+.event-icon {
+  color: #1a1a25;
+}
+
+.popoverspace{
+    width: 206px;
+    display: inline-block;
+    position: relative;
+    left: 23px;
+    top: -48px;
+;
+}
+.exPopOver {
+  display: inline-block;
+}
+.infoIconPos-prerqs{
+  margin: 0 0px 0 10px;
+  color: #3699ff;
+  cursor: pointer;
+}
+.popOvrIcon{
+  display: inline;
+  position: relative; 
+  left: 2px; 
+  top:0
+}
+.popover {
+  width: 300px !important;
+  height: auto;
+  left: 20px !important;
+}
+.popOvrHeading{
+margin-left: 13px;
+}
+.popOvrBottom{
+position: relative !important;
+top: 3% !important; 
+left: 2px !important;
+}
+
+.popOvrBottom ul{
+}
+.popOvrBottom ul li{
+// width: 23px;
+// height: 13px;
+}
+.resourcesTxt{
+color: #000 !important;
+text-align: left !important;
+font: normal normal 600 11px/18px Poppins !important;
+letter-spacing: 0.38px !important;
+color: #1A1A25 !important;
+text-transform: uppercase !important;
+opacity: 1 !important;
+}
+:host >>> .popover {
+  width: 300px !important;
+}
+@media (max-width: 1366px) {
+  label p {
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+  }
+  .wizTitle {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+  .wizCheckWrap p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .step1RadioRev {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+  .step1RadioRev label {
+    margin: 0 0px 15px 0;
+  }
+  .wizUserWrap {
+    padding: 15px;
+  }
+  .wizUhead {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .wizUCDd {
+    width: 100%;
+  }
+}
+
+.has-error {
+  color: red;
+}

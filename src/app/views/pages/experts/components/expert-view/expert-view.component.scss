@@ -1,0 +1,178 @@
+.filterButton {
+  height: 40px;
+  background-color: #e4e6ed;
+  color: #1a1a25;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 18px;
+}
+.exptLanTime > div {
+  margin: 0 30px 0 0;
+}
+.expertName span {
+  color: #1a1a25;
+  font-size: 24px;
+  font-weight: 600 !important;
+}
+.symbol.symbol-lg-35.expertProfile > img {
+  width: 100%;
+  max-width: 56px;
+  height: 56px;
+}
+.card.card-custom.cursor-pointer.expertcard {
+  padding: 30px 0;
+}
+.expertCardTags {
+  height: 36px;
+  background: #f3f6f9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 15px 15px 0;
+  color: #5b5d6a;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.linkedAccounts p {
+  color: #1a1a25;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+.linkedAccounts span {
+  color: #b5b5c1 !important;
+  font-size: 24px !important;
+  margin: 0 10px 0 0;
+}
+.linkedAccounts {
+  margin: 10px 0 30px 0;
+}
+.viewExDesc {
+  font-size: 16px !important;
+  color: #1a1a25;
+  margin: 0 0 30px 0;
+}
+.accounts {
+  width: 100%;
+  height: 72px;
+  background: #f3f6f9 0% 0% no-repeat padding-box;
+  border: 1px solid #d2d4da;
+  border-radius: 8px;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 0 24px 0;
+}
+.accountName img {
+  margin: 0 15px 0 0;
+}
+.accountName p {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+.accShare i {
+  color: #3d8bee !important;
+  font-size: 16px !important;
+}
+.cerDesc p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cerDesc span {
+  margin: 0;
+  color: #5b5d6a;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cerifications {
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #d2d4da;
+  padding: 25px 0;
+}
+.cerIcon {
+  width: 56px;
+  height: 56px;
+  background: #d9f5f4 0% 0% no-repeat padding-box;
+  border: 1px solid #77c0bb;
+  opacity: 1;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin: 0 10px 0 0;
+}
+.cerIcon span {
+  font-size: 20px !important;
+  color: #77c0bb !important;
+}
+
+.cerInfo {
+  color: #5b5d6a;
+  font-size: 16px;
+}
+.cerifications:first-child {
+  padding-top: 0 !important;
+}
+.cerifications:last-child {
+  border: none;
+}
+@media (max-width: 778px) {
+  .expertName span {
+    font-size: 21px;
+  }
+  .card.card-custom.cursor-pointer.expertcard {
+    padding: 15px;
+  }
+  .viewExDesc {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 490px) {
+  .cerIcon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+  .cerifications {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end !important;
+  }
+  .certificates {
+    align-items: start !important;
+  }
+  .accounts {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .cerDesc p,
+  .cerDesc span,
+  .accountName p {
+    font-size: 14px;
+  }
+  .cerInfo {
+    font-size: 12px;
+  }
+  .linkedAccounts p {
+    font-size: 18px;
+  }
+  .linkedAccounts {
+    margin: 10px 0 15px 0;
+  }
+  .expertName span {
+    font-size: 20px;
+  }
+  .symbol.symbol-lg-35.expertProfile > img {
+    max-width: 45px;
+    height: 45px;
+  }
+  .cerifications {
+    padding: 15px 0 0px 0;
+  }
+}

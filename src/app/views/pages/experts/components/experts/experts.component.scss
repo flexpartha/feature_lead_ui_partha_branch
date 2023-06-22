@@ -1,0 +1,112 @@
+.subHeadFlContent p {
+  margin: 0 10px 0 18px;
+}
+.subHeadFlContent span {
+  color: #d2d4da;
+}
+.filterButton {
+  height: 40px;
+  background-color: #e4e6ed;
+  color: #1a1a25;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 18px;
+}
+.filterButton span {
+  color: #1a1a25 !important;
+  margin: 0 5px 0 0;
+}
+.filterTags {
+  background: #f3f6f9;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 0 20px 0 0;
+  color: #5b5d6a;
+}
+.filterTags span {
+  color: #d36467;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+  font-size: 20px !important;
+}
+.expertName span {
+  color: #1a1a25;
+  font-size: 24px;
+  font-weight: 600 !important;
+}
+
+.symbol.symbol-lg-35.expertProfile > img {
+  width: 100%;
+  max-width: 56px;
+  height: 56px;
+}
+.card.card-custom.cursor-pointer.expertcard {
+  padding: 30px 0;
+}
+.expertCardTags {
+  height: 36px;
+  background: #f3f6f9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 15px 15px 0;
+  color: #5b5d6a;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.exptLanTime > div {
+  margin: 0 30px 0 0;
+}
+.exptCardBody {
+  padding: 0 2rem !important;
+}
+.exptLanTime {
+  font-size: 16px !important;
+  color: #1a1a25;
+}
+.expSearchBox {
+  border: 1px solid #d2d4da;
+  padding: 0 10px;
+  width: 380px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  .expSearchBox {
+    width: 100%;
+  }
+  .expertName span {
+    font-size: 20px;
+  }
+  .symbol.symbol-lg-35.expertProfile > img {
+    max-width: 40px;
+    height: 40px;
+  }
+  .card-header {
+    padding: 0 15px;
+  }
+  .card.card-custom.cursor-pointer.expertcard {
+    padding: 15px;
+  }
+}
+@media (max-width: 835px) {
+  .expertContainer {
+    margin: 35px 0 0 0;
+  }
+}
+@media (max-width: 490px) {
+  .subHeadFlContent p {
+    margin: 0 0px 0 5px;
+  }
+  .subHeadFlContent h5 {
+    margin: 0 5px 0 0 !important;
+  }
+  .expertContainer {
+    margin: 0;
+  }
+}

@@ -1,0 +1,28 @@
+<!-- begin:: Page -->
+<ng-container>
+	<kt-header-mobile></kt-header-mobile>
+	<div class="d-flex flex-column flex-root">
+		<div class="d-flex flex-row flex-column-fluid page">
+			<ng-container>
+				<kt-aside-left></kt-aside-left>
+			</ng-container>
+			<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+				<kt-header></kt-header>
+				<div class="content d-flex flex-column flex-column-fluid" id="kt_content" [ngClass]="contentClasses">
+					<div ktContentAnimate class="d-flex flex-column-fluid position-relative">
+						<div class="pageBodyContent">
+							<router-outlet></router-outlet>
+						</div>
+					</div>
+				</div>
+				<kt-footer></kt-footer>
+			</div>
+		</div>
+		<kt-scroll-top></kt-scroll-top>
+	</div>
+</ng-container>
+<ng-template #blankLayout>
+	<div class="d-flex flex-column flex-root">
+		<router-outlet></router-outlet>
+	</div>
+</ng-template>

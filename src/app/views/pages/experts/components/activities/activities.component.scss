@@ -1,0 +1,87 @@
+.demo-tab-group {
+    border: none !important;
+  }
+  .activityBox {
+    padding: 15px;
+  }
+  
+  .activityRow .card {
+    margin: 0 0 0 27px;
+    border-radius: 0 !important;
+    border-top: 0;
+    border-left: 1px solid #d2d4da;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  
+  .actHeader {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  .actHeader span {
+    margin: 0 10px 0 0;
+  }
+  
+  .activityBox .demo-tab-content {
+    padding: 0 0 15px 0;
+  }
+  .actButTitle {
+    margin: 0 0 15px 0;
+  }
+  .actButTitle h5 {
+    margin: 0;
+  }
+  .fileButton {
+    width: 40px;
+    height: 40px;
+    background: #f6e4e5 0% 0% no-repeat padding-box;
+    border: 1px solid #c56a6a;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin: 0 15px 0 0;
+  }
+  .fileButton span {
+    color: #d36467;
+    font-size: 14px !important;
+  }
+  .actInfoBox {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #d2d4da;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  .downbtnsGroup {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .dlAttachButton {
+    background: #f3f6f9 0% 0% no-repeat padding-box;
+    border: 1px solid #d2d4da;
+    border-radius: 8px;
+    height: 64px;
+    padding: 0 12px;
+    font-size: 10px;
+    color: #1a1a25;
+  }
+  .dlAttachButton span {
+    font-size: 18px !important;
+  }
+  .dlAttachButton span:nth-child(2) {
+    color: #1a1a25 !important;
+  }
+
+  .demo-tab-content p {
+    color: #5b5d6a;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 25px;
+  }
+
+  .leftspace{
+    margin-left: 16px !important;
+  }

@@ -1,0 +1,117 @@
+
+<div class="activityBox" *ngIf="ActivitiesList">
+    <div class="activityRow" *ngFor="let allActivities of ActivitiesList; let i = index;">
+        <div class="actHeader">
+            <span class="material-icons"> event </span> {{getFormatedHeaderDate(allActivities.activityDate)}}
+        </div>
+        <div class="demo-tab-content leftspace" *ngFor="let expertActivity of allActivities?.expertActivities">
+          <div class="example-preview">
+              <div class="d-flex align-items-center actButTitle">
+                <button type="button"
+                  class="fileButton"
+                  
+                  [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="collapseExample">
+                  <span class="material-icons">
+                    description
+                    </span>
+                </button> 
+                <h5 >{{expertActivity.expertName}}
+                  {{getFormattedDate(expertActivity.activityDate)}} <span style="margin-left: 3px;">{{getFormattedTime(expertActivity.activityDate)}}</span>
+                </h5> 
+              </div>
+              <div id="collapseExample" [ngbCollapse]="isCollapsed">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="actInfoBox">
+                        <div class="actInfoRow">
+                          <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                              <div class="symbol symbol-circle symbol-lg-35">
+                                <img src="../../../../../../assets/media/images/user.png"
+                                   alt="image" width="25" height="25"
+                                  />
+                              </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <span class="font-weight-normal profilename"
+                                >{{expertActivity.expertName}}</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="actInfoRow">
+                          <p>{{expertActivity.description}}</p>
+                        </div>
+                        <div class="actInfoRow d-flex downbtnsGroup" >
+                          <!-- <ng-container *ngFor="let fileUlr of allActivities?.fullurlList; let i = index;"> -->
+                          <button type="button" *ngFor="let fileUlr of expertActivity?.fullurlList; let i = index;" class="dlAttachButton d-flex align-items-center mr-4"><span class="material-icons mr-2">link</span> {{getFileName(fileUlr)}} <span class="material-icons ml-2" (click)="downloadFile(fileUlr)">
+                            save_alt
+                            </span>
+                          </button>
+                        <!-- </ng-container> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- <div class="demo-tab-content">
+          <div class="example-preview">
+              <div class="d-flex align-items-center actButTitle">
+                  <button type="button"
+                    class="fileButton"
+                    (click)="isCollapsed2 = !isCollapsed2"
+                    [attr.aria-expanded]="!isCollapsed2"
+                    aria-controls="collapseExample2">
+                    <span class="material-icons">
+                      description
+                      </span>
+                  </button> <h5>Activity Name, Date & Time</h5>
+              </div>
+              <div id="collapseExample2" [ngbCollapse]="isCollapsed2">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="actInfoBox">
+                        <div class="actInfoRow">
+                          <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+                              <div class="symbol symbol-circle symbol-lg-35">
+                                <img
+                                  src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                                  alt="image"
+                                />
+                              </div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <span class="font-weight-normal profile-name"
+                                >Walter Cook</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="actInfoRow">
+                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                        </div>
+                        <div class="actInfoRow d-flex downbtnsGroup">
+                          <button class="dlAttachButton d-flex align-items-center mr-4"><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                            save_alt
+                            </span></button>
+                            <button class="dlAttachButton d-flex align-items-center mr-4  "><span class="material-icons mr-2">link</span> File name.xyz <span class="material-icons ml-2">
+                              save_alt
+                              </span></button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div> -->
+    </div>
+</div>
+<div  class="noDatabg" *ngIf="isShowNodata">
+    <img class="no-data-img" src="../../../../../../assets/media/images/no-data.png" />
+    <p>{{ "NEW_ASSESSMENT.NO_ACTIVE_ACTIVITIES" | translate }}</p>
+</div>
